@@ -1,0 +1,9 @@
+{
+  "host": "SEU_HOST_MYSQL",
+  "port": 3306,
+  "user": "SEU_USUARIO",
+  "password": "SUA_SENHA",
+  "database": "scriptbd",
+  "trialDays": 2,
+  "connectTimeout": 15000
+}
