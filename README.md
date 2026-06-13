@@ -1,6 +1,6 @@
 <div align="center">
 
-# ScriptClean — ScriptWhatsApp v3.0.2
+# ScriptClean — ScriptWhatsApp v3.0.3
 
 **Bot de atendimento WhatsApp profissional**
 
@@ -9,48 +9,55 @@
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js)
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?style=flat-square&logo=windows)
 ![Trial](https://img.shields.io/badge/Teste%20gratis-2%20dias-success?style=flat-square)
-![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0-blueviolet?style=flat-square)
+![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0.3-blueviolet?style=flat-square)
 
-### [⬇️ Baixar ScriptClean-Cliente-v3.0.2.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.2.zip)
+### [⬇️ Baixar ScriptClean-Cliente-v3.0.3.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.3.zip)
 
-**Release v3.0.2:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.2](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.2)
+**Release v3.0.3:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3)
 
 </div>
 
 ---
 
-## ScriptWhatsApp v3.0 — Teste grátis 2 dias
+## Teste grátis 2 dias
 
-Pacote completo para instalar o **ScriptWhatsApp** no seu Windows.
-
-**Não precisa comprar antes.** Baixe, instale e teste por 2 dias.
+Baixe, instale e teste **sem comprar antes**.
 
 ---
 
-## O que fazer
+## Instalação (5 passos)
 
-1. Baixe **`ScriptClean-Cliente-v3.0.2.zip`** — [download direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.2.zip) · [Release v3.0.2](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.2)
+1. Baixe **`ScriptClean-Cliente-v3.0.3.zip`** na [Release](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3)
 2. **Extraia** o ZIP em uma pasta
-3. Edite **`config\bot.config.json`** com seu WhatsApp (`+55...`) e ID do grupo
+3. Edite **`config\bot.config.json`** — seu WhatsApp (`+55...`) e ID do grupo
 4. Execute **`Instalar-ScriptClean.bat`**
 5. Abra o atalho **ScriptWhatsApp - Iniciar** e escaneie o QR Code
 
-> **⚠️ Use apenas 1 bot por computador** — não abra duas janelas do ScriptWhatsApp no mesmo PC.
-
-> Execute o **`.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho.  
-> Use o **ZIP da Release**, não `git clone` nem o botão "Code".
+> Execute o **`.bat`** — não abra `ScriptClean-Setup.exe` sozinho.  
+> Use o **ZIP da Release**, não o botão "Code" do GitHub.
 
 ---
 
-## Pasta após instalar
+## ⚠️ Regra importante — 1 PC, 1 bot
 
-O instalador **remove arquivos de desenvolvimento** e deixa só o necessário:
+**Use apenas uma janela do ScriptWhatsApp por computador.**
 
-- `ScriptWhatsApp.exe` + atalhos
-- `Manutencao-ScriptClean.bat` · `COMO-USAR.txt`
-- `config/` · `index.js` · `node_modules/`
+| Por quê? |
+|----------|
+| WhatsApp Web aceita **uma sessão** por número |
+| Duas janelas = desconexão, QR de novo ou mensagens duplicadas |
+| Licença é **1 por PC** — não adianta abrir duas pastas |
 
-Não aparecem mais: `README` do código, `database/`, `POSTAGEM-FACEBOOK.txt`, fontes `.cs`.
+Para reiniciar: feche a janela ou use **Manutencao-ScriptClean.bat** (dentro de `bot-whatsapp` após instalar).
+
+---
+
+## Como o bot atende (grupo → privado)
+
+1. Cliente entra no **grupo oficial** → boas-vindas pelo nome  
+2. Bot chama no **privado** e faz a entrevista guiada  
+3. Quem manda no privado **sem passar pelo grupo** → ignorado (anti-spam)  
+4. Outros grupos → bot fica em **silêncio total**
 
 ---
 
@@ -61,13 +68,13 @@ Não aparecem mais: `README` do código, `database/`, `POSTAGEM-FACEBOOK.txt`, f
 | Windows 10 ou 11 | — |
 | Node.js 18+ | [nodejs.org](https://nodejs.org) |
 | Git | [git-scm.com](https://git-scm.com) |
-| Internet estável | WhatsApp + validação de licença |
+| Internet estável | WhatsApp + licença |
 
 ---
 
 ## Configurar WhatsApp
 
-Edite `config\bot.config.json`:
+`config\bot.config.json`:
 
 ```json
 {
@@ -78,8 +85,18 @@ Edite `config\bot.config.json`:
 
 | Campo | Descrição |
 |-------|-----------|
-| `ADMIN_NUMBER` | Seu WhatsApp com DDI (`+55...`) — comandos admin |
+| `ADMIN_NUMBER` | Seu WhatsApp (`+55...`) — `#menu`, `#painel`, `#exportar` |
 | `ALLOWED_GROUP_ID` | ID do grupo — use `#meugrupo` após ligar o bot |
+
+---
+
+## Pasta após instalar
+
+O instalador baixa o código e **remove arquivos de desenvolvimento**:
+
+- `ScriptWhatsApp.exe` + atalhos  
+- `Manutencao-ScriptClean.bat` · `COMO-USAR.txt`  
+- `config/` · `index.js` · `node_modules/`
 
 ---
 
@@ -87,14 +104,12 @@ Edite `config\bot.config.json`:
 
 | Regra | Detalhe |
 |-------|---------|
-| **Duração** | 2 dias gratuitos |
-| **Início** | Na **primeira vez** que o bot ligar |
-| **Por PC** | 1 trial por computador |
-| **Chave** | `SC-XXXXXXXX` — guarde para suporte |
-| **Após expirar** | Contrate a licença com a ScriptClean |
+| Duração | 2 dias |
+| Início | Na **primeira vez** que o bot ligar |
+| Por PC | 1 trial por computador |
+| Chave | `SC-XXXXXXXX` — guarde para suporte |
 
-Para renovar: informe sua chave `SC-...` e ID de Instalação (tela de bloqueio ou `#licenca`).  
-A ScriptClean ativa no servidor — **sem reinstalar**.
+Após expirar: contrate com a ScriptClean (ativação no servidor, **sem reinstalar**).
 
 ---
 
@@ -104,21 +119,17 @@ A ScriptClean ativa no servidor — **sem reinstalar**.
 |------|------|
 | Ligar | Atalho **ScriptWhatsApp - Iniciar** |
 | Reiniciar | Atalho **ScriptWhatsApp - Reiniciar** |
-| Ver licença | `#licenca` no WhatsApp admin |
+| Manutenção | `Manutencao-ScriptClean.bat` |
+| Ver licença | `#licenca` no privado (admin) |
+| Painel admin | `#menu` ou `#painel` |
 | Exportar leads | `#exportar` |
-
-### Comandos admin
-
-`#painel` · `#licenca` · `#rr` · `#exportar` · `#meugrupo`
 
 ---
 
 ## Suporte
 
 - **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **Release v3.0.2:** [scriptclean-launcher/releases/tag/v3.0.2](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.2)
-- **Todas as releases:** [scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
-- **Comprar / renovar:** WhatsApp ScriptClean
+- **Releases:** [github.com/ALN2025/scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
 
 ---
 
