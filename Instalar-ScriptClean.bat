@@ -137,6 +137,21 @@ if errorlevel 1 (
 
 echo.
 echo  Registrando trial de 2 dias neste PC...
+
+if not exist "node_modules\mysql2" (
+    echo  [AVISO] mysql2 ausente - instalando dependencias...
+    set PUPPETEER_SKIP_DOWNLOAD=true
+    call npm install
+    set PUPPETEER_SKIP_DOWNLOAD=
+)
+
+if not exist "config\license-db.config.json" (
+    echo  [ERRO] config\license-db.config.json nao encontrado em bot-whatsapp\config
+    popd
+    pause
+    exit /b 1
+)
+
 node scripts/setup-install.js
 if errorlevel 1 (
     echo  [ERRO] Registro de licenca falhou.
