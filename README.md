@@ -1,138 +1,68 @@
-<div align="center">
+# ScriptWhatsApp v3.0 — Código-fonte (privado)
 
-# ScriptClean — ScriptWhatsApp v3.0.3
+**ScriptClean -Solutions-** · Repositório de desenvolvimento.
 
-**Bot de atendimento WhatsApp profissional**
-
-🌐 [scriptclean.com.br](https://scriptclean.com.br) · ScriptClean -Solutions-
-
-![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js)
-![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?style=flat-square&logo=windows)
-![Trial](https://img.shields.io/badge/Teste%20gratis-2%20dias-success?style=flat-square)
-![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0.3-blueviolet?style=flat-square)
-
-### [⬇️ Baixar ScriptClean-Cliente-v3.0.3.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.3.zip)
-
-**Release v3.0.3:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3)
-
-</div>
+Distribuição ao cliente: [scriptclean-launcher](https://github.com/ALN2025/scriptclean-launcher) (ZIP + `Instalar-ScriptClean.bat`).
 
 ---
 
-## Teste grátis 2 dias
+## Novidades v3.0.3
 
-Baixe, instale e teste **sem comprar antes**.
-
----
-
-## Instalação (5 passos)
-
-1. Baixe **`ScriptClean-Cliente-v3.0.3.zip`** na [Release](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.3)
-2. **Extraia** o ZIP em uma pasta
-3. Edite **`config\bot.config.json`** — seu WhatsApp (`+55...`) e ID do grupo
-4. Execute **`Instalar-ScriptClean.bat`**
-5. Abra o atalho **ScriptWhatsApp - Iniciar** e escaneie o QR Code
-
-> Execute o **`.bat`** — não abra `ScriptClean-Setup.exe` sozinho.  
-> Use o **ZIP da Release**, não o botão "Code" do GitHub.
+- Modo restrito por grupo — anti-spam no privado
+- Admin `#menu` / `#painel` com suporte a ID `@lid`
+- Painel verbose com contadores **Trial** e **PRO**
+- Bloqueio de **2 instâncias** no mesmo PC
+- Instalação limpa: `cleanup-client.js` remove arquivos de dev
+- Licença MEK estável + trial 2 dias (MySQL VPS)
 
 ---
 
-## ⚠️ Regra importante — 1 PC, 1 bot
+## Requisitos (dev)
 
-**Use apenas uma janela do ScriptWhatsApp por computador.**
-
-| Por quê? |
-|----------|
-| WhatsApp Web aceita **uma sessão** por número |
-| Duas janelas = desconexão, QR de novo ou mensagens duplicadas |
-| Licença é **1 por PC** — não adianta abrir duas pastas |
-
-Para reiniciar: feche a janela ou use **Manutencao-ScriptClean.bat** (dentro de `bot-whatsapp` após instalar).
+| Item | Versão |
+|------|--------|
+| Windows | 10 / 11 |
+| Node.js | 18.18+ |
+| .NET Framework | 4.x |
+| MySQL (VPS) | 5.5+ — banco `scriptbd` |
 
 ---
 
-## Como o bot atende (grupo → privado)
+## Configuração local
 
-1. Cliente entra no **grupo oficial** → boas-vindas pelo nome  
-2. Bot chama no **privado** e faz a entrevista guiada  
-3. Quem manda no privado **sem passar pelo grupo** → ignorado (anti-spam)  
-4. Outros grupos → bot fica em **silêncio total**
-
----
-
-## Requisitos
-
-| Item | Link |
-|------|------|
-| Windows 10 ou 11 | — |
-| Node.js 18+ | [nodejs.org](https://nodejs.org) |
-| Git | [git-scm.com](https://git-scm.com) |
-| Internet estável | WhatsApp + licença |
-
----
-
-## Configurar WhatsApp
-
-`config\bot.config.json`:
-
-```json
-{
-  "ADMIN_NUMBER": "+5551999999999",
-  "ALLOWED_GROUP_ID": "120363407610857946@g.us"
-}
+```bat
+copy config\bot.config.example.json config\bot.config.json
+copy config\license-db.config.example.json config\license-db.config.json
 ```
 
-| Campo | Descrição |
-|-------|-----------|
-| `ADMIN_NUMBER` | Seu WhatsApp (`+55...`) — `#menu`, `#painel`, `#exportar` |
-| `ALLOWED_GROUP_ID` | ID do grupo — use `#meugrupo` após ligar o bot |
+---
+
+## Desenvolvimento
+
+```bat
+npm install
+node scripts\test-mysql.js
+node scripts\setup-install.js
+Compilar-Tudo.bat
+Iniciar-ScriptWhatsApp.bat
+```
 
 ---
 
-## Pasta após instalar
+## Ferramentas
 
-O instalador baixa o código e **remove arquivos de desenvolvimento**:
-
-- `ScriptWhatsApp.exe` + atalhos  
-- `Manutencao-ScriptClean.bat` · `COMO-USAR.txt`  
-- `config/` · `index.js` · `node_modules/`
-
----
-
-## Trial — 2 dias grátis
-
-| Regra | Detalhe |
-|-------|---------|
-| Duração | 2 dias |
-| Início | Na **primeira vez** que o bot ligar |
-| Por PC | 1 trial por computador |
-| Chave | `SC-XXXXXXXX` — guarde para suporte |
-
-Após expirar: contrate com a ScriptClean (ativação no servidor, **sem reinstalar**).
+| Arquivo | Função |
+|---------|--------|
+| `Manutencao-ScriptClean.bat` | Menu VPS/local (git pull, admin, reiniciar) |
+| `scripts/cleanup-client.js` | Remove arquivos dev após instalação cliente |
+| `database/scriptclean_licenses.sql` | Tabelas MySQL (só VPS / Navicat) |
 
 ---
 
-## Uso diário
+## Regra importante
 
-| Ação | Como |
-|------|------|
-| Ligar | Atalho **ScriptWhatsApp - Iniciar** |
-| Reiniciar | Atalho **ScriptWhatsApp - Reiniciar** |
-| Manutenção | `Manutencao-ScriptClean.bat` |
-| Ver licença | `#licenca` no privado (admin) |
-| Painel admin | `#menu` ou `#painel` |
-| Exportar leads | `#exportar` |
+**1 PC = 1 bot = 1 licença.** Não abrir duas janelas no mesmo computador.
 
 ---
 
-## Suporte
-
-- **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **Releases:** [github.com/ALN2025/scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
-
----
-
-**ScriptClean -Solutions-** · BUILD 2026
-
-*Uso licenciado. Não copiar nem redistribuir.*
+**ScriptClean -Solutions-** · Dev ⩿ A.L.N/⪀
