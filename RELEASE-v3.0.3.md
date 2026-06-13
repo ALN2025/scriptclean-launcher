@@ -1,23 +1,22 @@
-# ScriptClean-Cliente v3.0.3
+## ScriptWhatsApp v3.0.3
 
-## Novidades
+### Novidades
+- `#menu` abre o painel admin
+- Reconhecimento do admin corrigido (WhatsApp LID)
+- Painel verbose com contadores **Trial** e **PRO**
+- Bloqueio de **2 instâncias** no mesmo PC (1 bot por computador)
+- Instalação mais limpa — remove arquivos de desenvolvimento
+- `Manutencao-ScriptClean.bat` para VPS e manutenção local
+- Atalho **Reiniciar** com logo
+- `Reiniciar.exe` compilado na instalação
+- Modo restrito por grupo — anti-spam no privado
 
-- Instalação mais limpa (remove arquivos de desenvolvimento)
-- Aviso e bloqueio: **apenas 1 bot por PC**
-- Admin `#menu` no privado (suporte `@lid`)
-- Painel verbose Trial/PRO
-- `Manutencao-ScriptClean.bat` + `COMO-USAR.txt`
-- `git clone --depth 1` — download mais leve
+### Instalar
+1. Baixe **ScriptClean-Cliente-v3.0.3.zip**
+2. Extraia e edite `config\bot.config.json` (admin + grupo)
+3. Execute **Instalar-ScriptClean.bat**
+4. Atalho **ScriptWhatsApp - Iniciar** → escaneie o QR Code
 
-## Arquivos no ZIP
+> **⚠️ Use apenas 1 bot por PC** — não abra duas janelas.
 
-- `Instalar-ScriptClean.bat`
-- `Reparar-Chrome.bat`
-- `config/` (com `install.token` na sua máquina ao montar)
-- `README.md`
-
-## Publicar
-
-1. Rode `Montar-Pacote-Cliente.bat`
-2. GitHub → Releases → New release → tag `v3.0.3`
-3. Anexe `ScriptClean-Cliente-v3.0.3.zip`
+🌐 [scriptclean.com.br](https://scriptclean.com.br)
