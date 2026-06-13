@@ -17,29 +17,29 @@
 
 ## Teste grátis por 2 dias — depois compre se gostar
 
-**Não precisa comprar antes.** Baixe, instale e use o ScriptWhatsApp no seu PC.
+**Não precisa comprar antes.** Baixe o pacote, instale e use no seu PC.
 
 | Etapa | O que acontece |
 |-------|----------------|
-| **1. Baixar** | Você baixa este pacote (grátis) |
+| **1. Baixar** | ZIP pronto (link abaixo) |
 | **2. Instalar** | Configura seu WhatsApp e executa o instalador |
-| **3. Testar** | **2 dias gratuitos** a partir da 1ª vez que o bot ligar |
-| **4. Comprar** | Gostou? Entre em contato com a ScriptClean para licença completa |
-
-> Servidor de licenças e validação **já vêm configurados** neste pacote.  
-> Você só informa **seu número de admin** e o **grupo WhatsApp** da sua empresa.
+| **3. Testar** | **2 dias gratuitos** na 1ª vez que o bot ligar |
+| **4. Comprar** | Gostou? Contrate com a ScriptClean |
 
 ---
 
-## O que vem neste pacote
+## Baixar agora
 
-| Arquivo | Função |
-|---------|--------|
-| `Instalar-ScriptClean.bat` | Instalador — **execute este arquivo** |
-| `ScriptClean-Setup.exe` | Auxiliar (não abrir sozinho) |
-| `config/license-db.config.json` | Servidor de licenças (já pronto) |
-| `config/bot.config.json` | **Você preenche** — seu admin e grupo |
-| `config/install.token` | Token para baixar o bot (incluído pela ScriptClean) |
+### 👉 [Clique aqui para baixar ScriptClean-Cliente-v3.0.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)
+
+Pacote completo — já vem tudo para instalar. **Não use** `git clone` nem o ZIP do botão "Code".
+
+1. Baixe e **extraia** o ZIP
+2. Edite `config\bot.config.json` (seu WhatsApp + grupo)
+3. Duplo clique em **`Instalar-ScriptClean.bat`**
+4. Abra o atalho **ScriptWhatsApp - Iniciar** e escaneie o QR Code
+
+> **Importante:** execute o `.bat` — **não** abra `ScriptClean-Setup.exe` sozinho.
 
 ---
 
@@ -54,26 +54,7 @@
 
 ---
 
-## Instalação (teste grátis)
-
-> **Importante:** execute **`Instalar-ScriptClean.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho.
-
-### 1. Baixe o pacote
-
-**Recomendado:** baixe **`ScriptClean-Cliente-v3.0.zip`** em [Releases](https://github.com/ALN2025/scriptclean-launcher/releases) (pacote completo para instalar).
-
-Ou baixe o código em **Code → Download ZIP** (se vier sem `install.token`, peça o pacote completo à ScriptClean).
-
-```bat
-git clone https://github.com/ALN2025/scriptclean-launcher.git
-cd scriptclean-launcher
-```
-
-> O ZIP da Release já inclui tudo para instalar. O `git clone` sozinho pode não trazer o token de download do bot.
-
-### 2. Configure seu WhatsApp
-
-Edite `config/bot.config.json` com **seus** dados:
+## Configurar WhatsApp (`config\bot.config.json`)
 
 ```json
 {
@@ -84,93 +65,46 @@ Edite `config/bot.config.json` com **seus** dados:
 
 | Campo | O que é |
 |-------|---------|
-| `ADMIN_NUMBER` | Seu WhatsApp com DDI (`+55...`) — recebe comandos admin |
-| `ALLOWED_GROUP_ID` | ID do grupo onde o bot atua — use `#meugrupo` no grupo após ligar o bot |
-
-> `license-db.config.json` e `install.token` **já vêm prontos** — não precisa alterar.
-
-### 3. Execute o instalador
-
-Duplo clique em **`Instalar-ScriptClean.bat`**.
-
-O instalador irá:
-1. Baixar o ScriptWhatsApp na pasta `bot-whatsapp/`
-2. Registrar **trial de 2 dias** no seu PC (MEK/HWID)
-3. Instalar dependências e criar atalhos **ScriptWhatsApp - Iniciar** / **Reiniciar**
-
-### 4. Inicie o bot
-
-Abra o atalho **ScriptWhatsApp - Iniciar** na área de trabalho.
-
-Na **primeira vez**, escaneie o **QR Code** do WhatsApp.
+| `ADMIN_NUMBER` | Seu WhatsApp com DDI (`+55...`) |
+| `ALLOWED_GROUP_ID` | ID do grupo — use `#meugrupo` no grupo após ligar o bot |
 
 ---
 
-## Período de teste (trial)
+## Trial (2 dias grátis)
 
 | Regra | Detalhe |
 |-------|---------|
-| **Duração** | **2 dias gratuitos** |
-| **Quando começa** | Na **primeira vez** que o bot ligar |
-| **Por computador** | 1 trial por PC — reinstalar não reinicia |
-| **Chave** | Aparece na instalação: `SC-XXXXXXXX` — guarde para suporte |
-| **Após expirar** | O bot bloqueia até você **contratar a licença** |
+| **Duração** | 2 dias gratuitos |
+| **Início** | Na **primeira vez** que o bot ligar |
+| **Por PC** | 1 trial por computador |
+| **Chave** | `SC-XXXXXXXX` — guarde para suporte |
+| **Após expirar** | Contrate a licença com a ScriptClean |
 
-### Trial encerrado? Gostou do bot?
-
-Entre em contato com a **ScriptClean** e informe sua **chave de licença** (`SC-...`) e **ID de Instalação** (aparecem na tela de bloqueio ou no comando `#licenca`).
-
-- **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **WhatsApp:** canal de vendas da ScriptClean
-
-Após a compra, a ScriptClean ativa sua licença no servidor — **sem precisar reinstalar**.
+Trial encerrado? Informe sua chave `SC-...` e ID de Instalação (tela de bloqueio ou `#licenca`). A ScriptClean ativa no servidor — **sem reinstalar**.
 
 ---
 
 ## Uso diário
 
-| Ação | Como fazer |
-|------|------------|
-| Ligar o bot | Atalho **ScriptWhatsApp - Iniciar** |
+| Ação | Como |
+|------|------|
+| Ligar | Atalho **ScriptWhatsApp - Iniciar** |
 | Reiniciar | Atalho **ScriptWhatsApp - Reiniciar** |
-| Ver licença | No WhatsApp admin: `#licenca` |
-| Exportar leads | No WhatsApp admin: `#exportar` |
+| Licença | `#licenca` no WhatsApp admin |
+| Exportar leads | `#exportar` |
 
 ---
 
-## Comandos no WhatsApp (admin)
+## Comandos admin
 
-| Comando | Função |
-|---------|--------|
-| `#painel` | Painel de administração |
-| `#licenca` | Ver status da licença e trial |
-| `#rr` | Reiniciar o bot |
-| `#exportar` | Baixar leads (CSV, Excel, PDF) |
-| `#meugrupo` | (no grupo) Ver ID do grupo |
+`#painel` · `#licenca` · `#rr` · `#exportar` · `#meugrupo`
 
 ---
 
-## Perguntas frequentes
-
-**Preciso comprar antes de testar?**  
-Não. Baixe, instale e use 2 dias grátis.
-
-**Preciso configurar servidor ou banco?**  
-Não. Tudo já vem neste pacote.
-
-**Posso testar em outro PC?**  
-Sim, cada PC tem seu próprio trial de 2 dias.
-
-**E se eu já usei o trial neste PC?**  
-O período de teste não reinicia no mesmo computador. Para continuar, contrate a licença.
-
----
-
-## Suporte e vendas
+## Suporte
 
 - **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **Trial / dúvidas:** WhatsApp da ScriptClean
-- **Comprar licença:** informe sua chave `SC-...` após o trial
+- **Comprar / renovar:** WhatsApp da ScriptClean
 
 ---
 

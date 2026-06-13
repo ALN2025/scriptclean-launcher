@@ -1,2 +1,9 @@
 # Token GitHub — NUNCA no Git publico (GitHub bloqueia o push)
 config/install.token
+
+# Pacote ZIP para Releases (gerado localmente)
+ScriptClean-Cliente-v3.0.zip
+*.zip
+
+# Ferramentas internas ScriptClean (so na sua maquina)
+Montar-Pacote-Cliente.bat
