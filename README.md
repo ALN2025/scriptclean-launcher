@@ -11,32 +11,47 @@
 ![Trial](https://img.shields.io/badge/Teste%20gratis-2%20dias-success?style=flat-square)
 ![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0-blueviolet?style=flat-square)
 
-**[⬇️ Baixar ScriptClean-Cliente-v3.0.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)**
+### [⬇️ Baixar ScriptClean-Cliente-v3.0.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)
 
 </div>
 
 ---
 
-## Teste grátis 2 dias — depois compre se gostar
+## ScriptWhatsApp v3.0 — Teste grátis 2 dias
 
-Não precisa comprar antes. Baixe, instale e use no seu PC.
+Pacote completo para instalar o **ScriptWhatsApp** no seu Windows.
 
-| Passo | Ação |
-|-------|------|
-| 1 | Baixe o **ZIP** (link acima) |
-| 2 | Extraia e edite `config\bot.config.json` |
-| 3 | Execute **`Instalar-ScriptClean.bat`** |
-| 4 | Abra **ScriptWhatsApp - Iniciar** e escaneie o QR Code |
-
-> Use o **ZIP da Release**, não `git clone` nem o botão "Code" do GitHub.
+**Não precisa comprar antes.** Baixe, instale e teste por 2 dias.
 
 ---
 
-## Instalação rápida
+## O que fazer
 
-1. **[Baixar pacote completo](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)**
-2. Extrair o ZIP em uma pasta
-3. Editar `config\bot.config.json`:
+1. Baixe **`ScriptClean-Cliente-v3.0.zip`** ([link direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip))
+2. **Extraia** o ZIP em uma pasta
+3. Edite **`config\bot.config.json`** com seu WhatsApp (`+55...`) e ID do grupo
+4. Execute **`Instalar-ScriptClean.bat`**
+5. Abra o atalho **ScriptWhatsApp - Iniciar** e escaneie o QR Code
+
+> Execute o **`.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho.  
+> Use o **ZIP da Release**, não `git clone` nem o botão "Code".
+
+---
+
+## Requisitos
+
+| Item | Link |
+|------|------|
+| Windows 10 ou 11 | — |
+| Node.js 18+ | [nodejs.org](https://nodejs.org) |
+| Git | [git-scm.com](https://git-scm.com) |
+| Internet estável | WhatsApp + validação de licença |
+
+---
+
+## Configurar WhatsApp
+
+Edite `config\bot.config.json`:
 
 ```json
 {
@@ -47,22 +62,8 @@ Não precisa comprar antes. Baixe, instale e use no seu PC.
 
 | Campo | Descrição |
 |-------|-----------|
-| `ADMIN_NUMBER` | Seu WhatsApp com DDI (`+55...`) |
+| `ADMIN_NUMBER` | Seu WhatsApp com DDI (`+55...`) — comandos admin |
 | `ALLOWED_GROUP_ID` | ID do grupo — use `#meugrupo` após ligar o bot |
-
-4. Duplo clique em **`Instalar-ScriptClean.bat`** (não abra o `.exe` sozinho)
-5. Atalho **ScriptWhatsApp - Iniciar** na área de trabalho
-
----
-
-## Requisitos
-
-| Item | Link |
-|------|------|
-| Windows 10 / 11 | — |
-| Node.js 18+ | [nodejs.org](https://nodejs.org) |
-| Git | [git-scm.com](https://git-scm.com) |
-| Internet | WhatsApp + validação de licença |
 
 ---
 
@@ -70,13 +71,14 @@ Não precisa comprar antes. Baixe, instale e use no seu PC.
 
 | Regra | Detalhe |
 |-------|---------|
-| Duração | 2 dias gratuitos |
-| Início | Na 1ª vez que o bot ligar |
-| Por PC | 1 trial por computador |
-| Chave | `SC-XXXXXXXX` — guarde para suporte |
-| Após expirar | Contrate com a ScriptClean |
+| **Duração** | 2 dias gratuitos |
+| **Início** | Na **primeira vez** que o bot ligar |
+| **Por PC** | 1 trial por computador |
+| **Chave** | `SC-XXXXXXXX` — guarde para suporte |
+| **Após expirar** | Contrate a licença com a ScriptClean |
 
-Para renovar: informe sua chave `SC-...` e ID de Instalação (`#licenca`). Ativação no servidor — **sem reinstalar**.
+Para renovar: informe sua chave `SC-...` e ID de Instalação (tela de bloqueio ou `#licenca`).  
+A ScriptClean ativa no servidor — **sem reinstalar**.
 
 ---
 
@@ -84,12 +86,14 @@ Para renovar: informe sua chave `SC-...` e ID de Instalação (`#licenca`). Ativ
 
 | Ação | Como |
 |------|------|
-| Ligar | **ScriptWhatsApp - Iniciar** |
-| Reiniciar | **ScriptWhatsApp - Reiniciar** |
-| Licença | `#licenca` |
+| Ligar | Atalho **ScriptWhatsApp - Iniciar** |
+| Reiniciar | Atalho **ScriptWhatsApp - Reiniciar** |
+| Ver licença | `#licenca` no WhatsApp admin |
 | Exportar leads | `#exportar` |
 
-**Comandos:** `#painel` · `#licenca` · `#rr` · `#exportar` · `#meugrupo`
+### Comandos admin
+
+`#painel` · `#licenca` · `#rr` · `#exportar` · `#meugrupo`
 
 ---
 
