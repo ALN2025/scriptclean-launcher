@@ -11,9 +11,9 @@
 ![Trial](https://img.shields.io/badge/Teste%20gratis-2%20dias-success?style=flat-square)
 ![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0-blueviolet?style=flat-square)
 
-### [⬇️ Baixar ScriptClean-Cliente-v3.0.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)
+### [⬇️ Baixar ScriptClean-Cliente-v3.0.1.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.1.zip)
 
-**Release v3.0.0:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
+**Release v3.0.1:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.1](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.1)
 
 </div>
 
@@ -29,7 +29,7 @@ Pacote completo para instalar o **ScriptWhatsApp** no seu Windows.
 
 ## O que fazer
 
-1. Baixe **`ScriptClean-Cliente-v3.0.zip`** — [download direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip) · [Release v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
+1. Baixe **`ScriptClean-Cliente-v3.0.1.zip`** — [download direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.1.zip) · [Release v3.0.1](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.1)
 2. **Extraia** o ZIP em uma pasta
 3. Edite **`config\bot.config.json`** com seu WhatsApp (`+55...`) e ID do grupo
 4. Execute **`Instalar-ScriptClean.bat`**
@@ -102,7 +102,7 @@ A ScriptClean ativa no servidor — **sem reinstalar**.
 ## Suporte
 
 - **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **Release v3.0.0:** [scriptclean-launcher/releases/tag/v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
+- **Release v3.0.1:** [scriptclean-launcher/releases/tag/v3.0.1](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.1)
 - **Todas as releases:** [scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
 - **Comprar / renovar:** WhatsApp ScriptClean
 
