@@ -1,6 +1,6 @@
 <div align="center">
 
-# ScriptClean — ScriptWhatsApp v3.0
+# ScriptClean — ScriptWhatsApp v3.0.1
 
 **Bot de atendimento WhatsApp profissional**
 
