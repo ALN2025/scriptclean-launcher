@@ -105,19 +105,35 @@ if not exist "config" mkdir config
 copy /Y "%LAUNCHER_CONFIG%\license-db.config.json" "config\license-db.config.json" >nul
 copy /Y "%LAUNCHER_CONFIG%\bot.config.json" "config\bot.config.json" >nul
 
-if not exist "node_modules" (
-    echo  npm install...
-    call npm install
-    if errorlevel 1 (
-        echo  [ERRO] npm install falhou.
-        popd
-        pause
-        exit /b 1
+echo  Limpando cache Puppeteer incompleto (se houver)...
+if exist "%USERPROFILE%\.cache\puppeteer\chrome" (
+    for /d %%D in ("%USERPROFILE%\.cache\puppeteer\chrome\*") do (
+        if not exist "%%D\chrome-win64\chrome.exe" rmdir /s /q "%%D" 2>nul
     )
+)
+
+if not exist "node_modules" (
+    echo  npm install (Chrome sera baixado depois)...
+    set PUPPETEER_SKIP_DOWNLOAD=true
+    call npm install
+    set PUPPETEER_SKIP_DOWNLOAD=
+    if errorlevel 1 (
+        echo  [AVISO] npm install com avisos - tentando continuar...
+    )
+) else (
+    echo  node_modules ja existe - pulando npm install
 )
 
 echo  Chrome do Puppeteer - 1a vez pode demorar...
 call npx puppeteer browsers install chrome
+if errorlevel 1 (
+    echo.
+    echo  [AVISO] Falha ao baixar Chrome do Puppeteer.
+    echo  Rode como Administrador OU instale Google Chrome no Windows.
+    echo  Depois execute: npx puppeteer browsers install chrome
+    echo.
+    pause
+)
 
 echo.
 echo  Registrando trial de 2 dias neste PC...
