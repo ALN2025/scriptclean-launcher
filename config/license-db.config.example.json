@@ -1,8 +1,8 @@
 {
-  "host": "SEU_HOST_MYSQL",
+  "host": "208.115.208.178",
   "port": 3306,
-  "user": "SEU_USUARIO",
-  "password": "SUA_SENHA",
+  "user": "scriptclean",
+  "password": "ScriptClean2026!",
   "database": "scriptbd",
   "trialDays": 2,
   "connectTimeout": 15000
