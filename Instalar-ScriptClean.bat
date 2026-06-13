@@ -8,6 +8,8 @@ echo.
 echo  ================================================================
 echo   ScriptClean - %SWA% v3.0 - TESTE GRATIS 2 DIAS
 echo   NAO execute ScriptClean-Setup.exe sozinho - use ESTE .bat
+echo.
+echo   IMPORTANTE: use APENAS 1 bot por PC (nao abra 2 janelas)
 echo  ================================================================
 echo.
 
@@ -90,7 +92,7 @@ if exist "%BOT_DIR%\.git" (
     popd
 ) else (
     echo  Clonando %SWA%...
-    git clone -b master "%CLONE_URL%" "%BOT_DIR%"
+    git clone --depth 1 -b master "%CLONE_URL%" "%BOT_DIR%"
     if errorlevel 1 (
         echo  [ERRO] Falha ao clonar. Verifique config\install.token
         pause
@@ -160,12 +162,17 @@ if errorlevel 1 (
     exit /b 1
 )
 
+echo  Organizando pasta do cliente...
+node scripts\cleanup-client.js
+
 popd
 
 echo.
 echo  ================================================================
 echo   TESTE GRATIS ATIVO - 2 dias apos a 1a execucao do bot
 echo   Gostou? Contrate em scriptclean.com.br
+echo.
+echo   LEMBRETE: apenas 1 ScriptWhatsApp por computador
 echo  ================================================================
 echo.
 echo  Pasta do bot: %BOT_DIR%

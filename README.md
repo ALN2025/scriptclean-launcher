@@ -35,8 +35,22 @@ Pacote completo para instalar o **ScriptWhatsApp** no seu Windows.
 4. Execute **`Instalar-ScriptClean.bat`**
 5. Abra o atalho **ScriptWhatsApp - Iniciar** e escaneie o QR Code
 
+> **⚠️ Use apenas 1 bot por computador** — não abra duas janelas do ScriptWhatsApp no mesmo PC.
+
 > Execute o **`.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho.  
 > Use o **ZIP da Release**, não `git clone` nem o botão "Code".
+
+---
+
+## Pasta após instalar
+
+O instalador **remove arquivos de desenvolvimento** e deixa só o necessário:
+
+- `ScriptWhatsApp.exe` + atalhos
+- `Manutencao-ScriptClean.bat` · `COMO-USAR.txt`
+- `config/` · `index.js` · `node_modules/`
+
+Não aparecem mais: `README` do código, `database/`, `POSTAGEM-FACEBOOK.txt`, fontes `.cs`.
 
 ---
 
