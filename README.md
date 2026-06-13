@@ -2,7 +2,7 @@
 
 # ScriptClean — Instalar ScriptBot v3.0
 
-**Bot de atendimento WhatsApp profissional · licença na nuvem**
+**Bot de atendimento WhatsApp profissional**
 
 🌐 [scriptclean.com.br](https://scriptclean.com.br) · ScriptClean -Solutions-
 
@@ -14,89 +14,67 @@
 
 ---
 
-Este repositório é o **instalador público** do ScriptBot.
+Bem-vindo! Este pacote instala o **ScriptBot** no seu computador.
 
-O código completo do bot fica em repositório **privado** (`ALN2025/bot-whatsapp`).  
-Aqui você baixa só o necessário para **instalar, ativar a licença e iniciar** o bot no seu PC.
-
----
-
-## O que tem neste repositório
-
-```
-scriptclean-launcher/
-├── README.md                         ← este guia
-├── Instalar-ScriptClean.bat          ← instalador principal
-├── ScriptClean-Setup.exe             ← instalador de licença (veja abaixo)
-└── config/
-    ├── license-db.config.example.json
-    └── bot.config.example.json
-```
-
-### O `.exe` pode ficar aqui?
-
-**Sim.** Você pode colocar o `ScriptClean-Setup.exe` de três formas:
-
-| Forma | Quando usar |
-|-------|-------------|
-| **Na pasta do repo** | Cliente clona/baixa ZIP e já tem o `.exe` junto |
-| **[GitHub Releases](https://github.com/ALN2025/scriptclean-launcher/releases)** | Recomendado — versiona `ScriptClean-Setup.exe` sem poluir o código |
-| **Enviado por você** | WhatsApp/e-mail após a compra (cliente cola na pasta) |
-
-> O `.exe` **não** fica no repo privado do bot — só neste launcher público ou em Releases.
+Após a compra, a ScriptClean envia os arquivos de configuração.  
+Você só precisa seguir os passos abaixo.
 
 ---
 
-## O que a ScriptClean envia ao cliente (após a compra)
+## O que vem neste pacote
 
-| Arquivo | Obrigatório | Função |
-|---------|-------------|--------|
-| `config/license-db.config.json` | ✅ Sim | Conexão com servidor de licenças (VPS) |
-| `config/bot.config.json` | ✅ Sim | Seu número admin + ID do grupo WhatsApp |
-| **Token GitHub** | ✅ Sim | Leitura do repo privado `bot-whatsapp` |
-| `ScriptClean-Setup.exe` | Recomendado | Registra licença + cria atalhos (ou use o do repo/Releases) |
-
-O cliente **não** cria token nem configura o MySQL — a ScriptClean envia tudo pronto.
+| Arquivo | Função |
+|---------|--------|
+| `Instalar-ScriptClean.bat` | Instalador — execute este arquivo |
+| `ScriptClean-Setup.exe` | Ativa a licença no seu PC |
+| `config/` | Pasta para os arquivos que a ScriptClean enviar |
 
 ---
 
-## Requisitos no PC do cliente
+## O que a ScriptClean envia para você
+
+Coloque na pasta `config/` **antes** de instalar:
+
+| Arquivo | Obrigatório |
+|---------|-------------|
+| `license-db.config.json` | ✅ Sim |
+| `bot.config.json` | ✅ Sim |
+| **Token de instalação** | ✅ Sim (a ScriptClean envia por WhatsApp/e-mail) |
+
+> Você **não** precisa configurar servidor nem banco de dados — tudo já vem pronto.
+
+---
+
+## Requisitos
 
 | Item | Link |
 |------|------|
 | Windows 10 ou 11 | — |
 | Node.js 18+ | [nodejs.org](https://nodejs.org) |
 | Git | [git-scm.com](https://git-scm.com) |
-| Internet | Para WhatsApp + validação de licença na VPS |
-
-> O bot roda **no PC do cliente**. A VPS só valida licença (MySQL) — não hospeda o bot.
+| Internet estável | Para WhatsApp e validação de licença |
 
 ---
 
-## Instalação — passo a passo
+## Instalação
 
 ### 1. Baixe este repositório
 
-**Opção A — Git:**
 ```bat
 git clone https://github.com/ALN2025/scriptclean-launcher.git
 cd scriptclean-launcher
 ```
 
-**Opção B — ZIP:**  
-[Code → Download ZIP](https://github.com/ALN2025/scriptclean-launcher/archive/refs/heads/main.zip)
+Ou baixe o ZIP em **Code → Download ZIP**.
 
-**Opção C — Release (com .exe):**  
-Baixe o ZIP da [última Release](https://github.com/ALN2025/scriptclean-launcher/releases) se disponível.
-
-### 2. Coloque os arquivos recebidos da ScriptClean
+### 2. Coloque os arquivos da ScriptClean
 
 ```
 scriptclean-launcher/
 ├── config/
-│   ├── license-db.config.json    ← substitui o .example
-│   └── bot.config.json           ← substitui o .example
-├── ScriptClean-Setup.exe         ← na pasta raiz (repo, Release ou enviado)
+│   ├── license-db.config.json
+│   └── bot.config.json
+├── ScriptClean-Setup.exe
 └── Instalar-ScriptClean.bat
 ```
 
@@ -104,77 +82,58 @@ scriptclean-launcher/
 
 Duplo clique em **`Instalar-ScriptClean.bat`**
 
-O script irá:
-
-1. Pedir o **token GitHub** (enviado pela ScriptClean)
-2. Clonar o bot do repo privado `bot-whatsapp` (branch `master`)
-3. Copiar seus configs (`license-db` + `bot`)
-4. Rodar `npm install`
-5. Executar **`ScriptClean-Setup.exe`** — registra licença na VPS
-6. Criar atalhos **ScriptBot - Iniciar** e **ScriptBot - Reiniciar**
+O instalador irá:
+1. Pedir o **token** enviado pela ScriptClean
+2. Baixar e preparar o ScriptBot no seu PC
+3. Registrar sua licença
+4. Criar os atalhos **ScriptBot - Iniciar** e **ScriptBot - Reiniciar**
 
 ### 4. Inicie o bot
 
-Use o atalho na área de trabalho: **ScriptBot - Iniciar**
+Abra o atalho **ScriptBot - Iniciar** na área de trabalho.
 
-Na **primeira execução**, escaneie o QR Code do WhatsApp (uma vez só).
+Na **primeira vez**, escaneie o **QR Code** do WhatsApp. Depois disso, não precisa escanear de novo.
 
 ---
 
-## Trial e licença
+## Período de teste (trial)
 
 | Regra | Detalhe |
 |-------|---------|
-| **Período de teste** | **2 dias** gratuitos |
-| **Quando começa** | Na **primeira vez** que o bot **ligar** (não na instalação) |
-| **1 computador = 1 trial** | Vinculado ao hardware (MEK/HWID) |
-| **Reinstalar** | **Não** reinicia o trial no mesmo PC |
-| **Chave de licença** | Gerada no setup: `SC-XXXXXXXX` — guarde para suporte |
-| **Após expirar** | Bot bloqueia com aviso *“Trial encerrado”* |
-| **Renovar** | Contate a ScriptClean — renovação feita no servidor |
+| **Duração** | 2 dias gratuitos |
+| **Quando começa** | Na **primeira vez** que o bot ligar |
+| **Por computador** | 1 trial por PC — reinstalar não reinicia |
+| **Chave de licença** | Aparece na instalação: `SC-XXXXXXXX` — guarde para suporte |
+| **Após expirar** | O bot bloqueia até a ScriptClean renovar |
 
-### Fluxo resumido
+### Trial encerrado?
 
-```
-Instalar → Setup registra PC na VPS → 1ª execução inicia trial 2 dias
-         → Trial acaba → bot bloqueia → ScriptClean renova → bot libera
-```
+O bot mostra uma tela de bloqueio com seu **ID de Instalação** e **chave de licença**.
 
-### Tela de bloqueio (trial esgotado)
-
-O bot exibe mensagem pedindo renovação e mostra:
-
-- **ID Instalação** — para suporte
-- **Chave de licença** — `SC-...` (se precisar informar à ScriptClean)
-
-Para renovar, envie a chave ou ID pelo WhatsApp da ScriptClean.
+Entre em contato com a ScriptClean pelo WhatsApp informado na compra para renovar.
 
 ---
 
 ## Uso diário
 
-| Ação | Como |
-|------|------|
+| Ação | Como fazer |
+|------|------------|
 | Ligar o bot | Atalho **ScriptBot - Iniciar** |
-| Reiniciar | Atalho **ScriptBot - Reiniciar** ou comando admin `#rr` |
-| Ver licença | Comando admin `#licenca` no WhatsApp |
-| Exportar leads | Comando admin `#exportar` (CSV, Excel, PDF) |
-
-O cliente **não** precisa da chave de licença no dia a dia — só para renovação/suporte.
+| Reiniciar | Atalho **ScriptBot - Reiniciar** |
+| Ver licença | No WhatsApp admin: `#licenca` |
+| Exportar leads | No WhatsApp admin: `#exportar` |
 
 ---
 
-## Comandos admin (WhatsApp)
-
-No privado, do número configurado em `bot.config.json`:
+## Comandos no WhatsApp (admin)
 
 | Comando | Função |
 |---------|--------|
-| `#painel` | Painel admin |
-| `#licenca` | Status da licença e MEK |
+| `#painel` | Painel de administração |
+| `#licenca` | Ver status da licença |
 | `#rr` | Reiniciar o bot |
-| `#exportar` | Enviar leads (CSV, Excel, PDF) |
-| `#meugrupo` | (no grupo) Descobrir ID do grupo |
+| `#exportar` | Baixar leads (CSV, Excel, PDF) |
+| `#meugrupo` | (no grupo) Ver ID do grupo |
 
 ---
 
@@ -185,52 +144,6 @@ No privado, do número configurado em `bot.config.json`:
 
 ---
 
-## Para a ScriptClean (uso interno)
+**ScriptClean -Solutions-** · BUILD 2026
 
-<details>
-<summary>Publicar/atualizar este repo + .exe</summary>
-
-1. Compile no projeto do bot: `Compilar-Tudo.bat` → gera `ScriptClean-Setup.exe`
-2. Copie para `launcher-public/` ou anexe numa **GitHub Release**
-3. Suba para [scriptclean-launcher](https://github.com/ALN2025/scriptclean-launcher):
-   - `README.md`
-   - `Instalar-ScriptClean.bat`
-   - `config/*.example.json`
-   - `ScriptClean-Setup.exe` (opcional na raiz ou só em Releases)
-
-</details>
-
-<details>
-<summary>Gerar token GitHub para o cliente</summary>
-
-1. GitHub → **Settings** → **Developer settings** → **Fine-grained tokens**
-2. Repository access: **Only** `ALN2025/bot-whatsapp`
-3. Permissions: **Contents → Read-only**
-4. Envie o token ao cliente após a compra
-
-</details>
-
-<details>
-<summary>Renovar licença no Navicat (banco scriptbd)</summary>
-
-```sql
--- Forçar trial esgotado (demo/teste)
-UPDATE licenses
-SET status = 'expired', trial_ends_at = '2020-01-01 00:00:00'
-WHERE license_key = 'SC-XXXXXXXX';
-
--- Renovar cliente
-UPDATE licenses
-SET status = 'active',
-    license_expires_at = '2027-12-31 23:59:59',
-    notes = 'Cliente renovado'
-WHERE license_key = 'SC-XXXXXXXX';
-```
-
-</details>
-
----
-
-*Código do bot: repositório privado licenciado. Não copiar, não redistribuir.*
-
-**Dev ⩿ A.L.N/⪀** · ScriptClean -Solutions- · BUILD 2026
+*Uso licenciado. Não copiar nem redistribuir.*
