@@ -5,7 +5,7 @@ cd /d "%~dp0"
 
 echo.
 echo  ╔══════════════════════════════════════════════════════════════╗
-echo  ║  ScriptClean - Instalador do ScriptBot v3.0                  ║
+echo  ║  ScriptClean - Instalador do ScriptWhatsApp v3.0               ║
 echo  ║  Repo privado: github.com/ALN2025/bot-whatsapp              ║
 echo  ╚══════════════════════════════════════════════════════════════╝
 echo.

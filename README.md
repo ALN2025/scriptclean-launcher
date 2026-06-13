@@ -1,6 +1,6 @@
 <div align="center">
 
-# ScriptClean — Instalar ScriptBot v3.0
+# ScriptClean — Instalar ScriptWhatsApp v3.0
 
 **Bot de atendimento WhatsApp profissional**
 
@@ -8,13 +8,13 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js)
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?style=flat-square&logo=windows)
-![Versão](https://img.shields.io/badge/ScriptBot-v3.0-blueviolet?style=flat-square)
+![Versão](https://img.shields.io/badge/ScriptWhatsApp-v3.0-blueviolet?style=flat-square)
 
 </div>
 
 ---
 
-Bem-vindo! Este pacote instala o **ScriptBot** no seu computador.
+Bem-vindo! Este pacote instala o **ScriptWhatsApp** no seu computador.
 
 Após a compra, a ScriptClean envia os arquivos de configuração.  
 Você só precisa seguir os passos abaixo.
@@ -84,13 +84,13 @@ Duplo clique em **`Instalar-ScriptClean.bat`**
 
 O instalador irá:
 1. Pedir o **token** enviado pela ScriptClean
-2. Baixar e preparar o ScriptBot no seu PC
+2. Baixar e preparar o ScriptWhatsApp no seu PC
 3. Registrar sua licença
-4. Criar os atalhos **ScriptBot - Iniciar** e **ScriptBot - Reiniciar**
+4. Criar os atalhos **ScriptWhatsApp - Iniciar** e **ScriptWhatsApp - Reiniciar**
 
 ### 4. Inicie o bot
 
-Abra o atalho **ScriptBot - Iniciar** na área de trabalho.
+Abra o atalho **ScriptWhatsApp - Iniciar** na área de trabalho.
 
 Na **primeira vez**, escaneie o **QR Code** do WhatsApp. Depois disso, não precisa escanear de novo.
 
@@ -118,8 +118,8 @@ Entre em contato com a ScriptClean pelo WhatsApp informado na compra para renova
 
 | Ação | Como fazer |
 |------|------------|
-| Ligar o bot | Atalho **ScriptBot - Iniciar** |
-| Reiniciar | Atalho **ScriptBot - Reiniciar** |
+| Ligar o bot | Atalho **ScriptWhatsApp - Iniciar** |
+| Reiniciar | Atalho **ScriptWhatsApp - Reiniciar** |
 | Ver licença | No WhatsApp admin: `#licenca` |
 | Exportar leads | No WhatsApp admin: `#exportar` |
 
