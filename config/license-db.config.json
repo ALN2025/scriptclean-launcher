@@ -1,8 +1,8 @@
 {
   "host": "208.115.208.178",
   "port": 3306,
-  "user": "scriptclean",
-  "password": "ScriptClean2026!",
+  "user": "root",
+  "password": "@ndersonLuis1982",
   "database": "scriptbd",
   "trialDays": 2,
   "connectTimeout": 15000
