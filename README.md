@@ -58,14 +58,18 @@
 
 > **Importante:** execute **`Instalar-ScriptClean.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho.
 
-### 1. Baixe este repositório
+### 1. Baixe o pacote
+
+**Recomendado:** baixe **`ScriptClean-Cliente-v3.0.zip`** em [Releases](https://github.com/ALN2025/scriptclean-launcher/releases) (pacote completo para instalar).
+
+Ou baixe o código em **Code → Download ZIP** (se vier sem `install.token`, peça o pacote completo à ScriptClean).
 
 ```bat
 git clone https://github.com/ALN2025/scriptclean-launcher.git
 cd scriptclean-launcher
 ```
 
-Ou baixe o ZIP em **Code → Download ZIP**.
+> O ZIP da Release já inclui tudo para instalar. O `git clone` sozinho pode não trazer o token de download do bot.
 
 ### 2. Configure seu WhatsApp
 
