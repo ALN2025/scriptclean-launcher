@@ -13,6 +13,8 @@
 
 ### [⬇️ Baixar ScriptClean-Cliente-v3.0.zip](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip)
 
+**Release v3.0.0:** [github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
+
 </div>
 
 ---
@@ -27,7 +29,7 @@ Pacote completo para instalar o **ScriptWhatsApp** no seu Windows.
 
 ## O que fazer
 
-1. Baixe **`ScriptClean-Cliente-v3.0.zip`** ([link direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip))
+1. Baixe **`ScriptClean-Cliente-v3.0.zip`** — [download direto](https://github.com/ALN2025/scriptclean-launcher/releases/latest/download/ScriptClean-Cliente-v3.0.zip) · [Release v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
 2. **Extraia** o ZIP em uma pasta
 3. Edite **`config\bot.config.json`** com seu WhatsApp (`+55...`) e ID do grupo
 4. Execute **`Instalar-ScriptClean.bat`**
@@ -100,7 +102,8 @@ A ScriptClean ativa no servidor — **sem reinstalar**.
 ## Suporte
 
 - **Site:** [scriptclean.com.br](https://scriptclean.com.br)
-- **Releases:** [github.com/ALN2025/scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
+- **Release v3.0.0:** [scriptclean-launcher/releases/tag/v3.0.0](https://github.com/ALN2025/scriptclean-launcher/releases/tag/v3.0.0)
+- **Todas as releases:** [scriptclean-launcher/releases](https://github.com/ALN2025/scriptclean-launcher/releases)
 - **Comprar / renovar:** WhatsApp ScriptClean
 
 ---
