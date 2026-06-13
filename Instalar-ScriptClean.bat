@@ -1,12 +1,12 @@
 @echo off
 chcp 65001 >nul
-title ScriptClean - Instalar Bot (repo privado)
+title ScriptClean - Instalar ScriptWhatsApp v3.0
 cd /d "%~dp0"
 
 echo.
 echo  ╔══════════════════════════════════════════════════════════════╗
 echo  ║  ScriptClean - Instalador do ScriptWhatsApp v3.0               ║
-echo  ║  Repo privado: github.com/ALN2025/bot-whatsapp              ║
+echo  ║  NAO execute ScriptClean-Setup.exe sozinho — use ESTE .bat     ║
 echo  ╚══════════════════════════════════════════════════════════════╝
 echo.
 
@@ -71,28 +71,35 @@ if exist "%BOT_DIR%\.git" (
 )
 
 echo  Copiando configs do cliente...
-mkdir config 2>nul
-copy /Y "%~dp0config\license-db.config.json" "config\license-db.config.json"
-copy /Y "%~dp0config\bot.config.json" "config\bot.config.json"
+if not exist "config" mkdir config
+copy /Y "%~dp0config\license-db.config.json" "config\license-db.config.json" >nul
+copy /Y "%~dp0config\bot.config.json" "config\bot.config.json" >nul
 
 if not exist "node_modules" (
     echo  npm install...
     call npm install
+    if errorlevel 1 (
+        echo  [ERRO] npm install falhou.
+        pause
+        exit /b 1
+    )
 )
 
-if exist "%~dp0ScriptClean-Setup.exe" (
-    copy /Y "%~dp0ScriptClean-Setup.exe" "ScriptClean-Setup.exe"
-)
+echo  Chrome do Puppeteer (1a vez pode demorar)...
+call npx puppeteer browsers install chrome
 
-if exist "ScriptClean-Setup.exe" (
-    echo.
-    echo  Executando ScriptClean-Setup.exe...
-    start /wait "" "ScriptClean-Setup.exe"
-) else (
-    echo  [AVISO] ScriptClean-Setup.exe nao encontrado.
-    echo  Rode manualmente apos compilar na pasta do bot.
+echo.
+echo  Registrando licenca neste PC...
+node scripts/setup-install.js
+if errorlevel 1 (
+    echo  [ERRO] Registro de licenca falhou.
+    pause
+    exit /b 1
 )
 
 echo.
-echo  Instalacao concluida. Pasta do bot: %BOT_DIR%
+echo  Instalacao concluida!
+echo  Pasta do bot: %BOT_DIR%
+echo  Use o atalho: ScriptWhatsApp - Iniciar
+echo.
 pause

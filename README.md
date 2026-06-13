@@ -58,6 +58,8 @@ Coloque na pasta `config/` **antes** de instalar:
 
 ## Instalação
 
+> **Importante:** execute **`Instalar-ScriptClean.bat`** — **não** abra `ScriptClean-Setup.exe` sozinho na pasta do launcher. O Setup só funciona **depois** que o `.bat` baixa o bot na subpasta `bot-whatsapp/`.
+
 ### 1. Baixe este repositório
 
 ```bat
@@ -80,12 +82,12 @@ scriptclean-launcher/
 
 ### 3. Execute o instalador
 
-Duplo clique em **`Instalar-ScriptClean.bat`**
+Duplo clique em **`Instalar-ScriptClean.bat`** (não use o `.exe` direto).
 
 O instalador irá:
 1. Pedir o **token** enviado pela ScriptClean
-2. Baixar e preparar o ScriptWhatsApp no seu PC
-3. Registrar sua licença
+2. Clonar o ScriptWhatsApp na subpasta `bot-whatsapp/`
+3. Copiar suas configs e registrar a licença (`node scripts/setup-install.js`)
 4. Criar os atalhos **ScriptWhatsApp - Iniciar** e **ScriptWhatsApp - Reiniciar**
 
 ### 4. Inicie o bot
